@@ -29,7 +29,7 @@ searchBox.addEventListener('input', debounce((event) => {
         else
             displayListOfCountries(searchResult);
     })
-    .catch(error => Notiflix.Notify.failure('Oops, there is no country with that name'));
+    .catch(error => notiflix.Notify.failure('Oops, there is no country with that name'));
     
 }, DEBOUNCE_DELAY));
 
