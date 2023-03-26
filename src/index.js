@@ -12,8 +12,10 @@ const countryInfo = document.querySelector('.country-info');
 
 searchBox.addEventListener('input', debounce((event) => {
     const input = event.target.value.trim();
-    if (input === '')
+    if (input === '') {
         clearResultHtml();
+        return;
+    }
     
     fetchCountries(input)
     .then(searchResult => {
